@@ -10,13 +10,13 @@ namespace Task3
 {
     public class Encrypter
     {
-        public string CreateKey(byte[] keyBytes)
+        public static string CreateKey(byte[] keyBytes)
         {
             byte[] hashedBytes = Sha3.Sha3256().ComputeHash(keyBytes);
             string key = BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
             return key;
         }
-        public string CreateHMAC(string key, int number)
+        public static string CreateHMAC(string key, int number)
         {
             byte[] combinedBytes = Encoding.UTF8.GetBytes(key + number);
             byte[] hashedBytes = Sha3.Sha3256().ComputeHash(combinedBytes);
