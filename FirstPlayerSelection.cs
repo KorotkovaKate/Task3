@@ -21,13 +21,13 @@ namespace Task3
             while (true)
             {
                 Console.Write("Your selection: ");
-                string input = Console.ReadLine();
-                if (input == "X") Environment.Exit(0);
-                if (input == "?") Console.WriteLine("Table");//To do later
-                if (input == "0" || input == "1")
+                string userSelection = Console.ReadLine();
+                if (userSelection == "X") Environment.Exit(0);
+                if (userSelection == "?") Console.WriteLine("Table");//To do later
+                if (userSelection == "0" || userSelection == "1")
                 {
                     Console.WriteLine($"My selection: {computerSelection} (KEY={key})");
-                    if (input == computerSelection.ToString()) isGuess = true;
+                    if (userSelection == computerSelection.ToString()) isGuess = true;
                     else isGuess = false;
                     return isGuess;
                 }
