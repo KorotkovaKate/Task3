@@ -12,16 +12,17 @@ namespace Task3
         {
             Checker.CheckDiceCount(args.Length);
             var dices = new List<List<int>>();
-            var faces = new List<int>();
+            var dice = new List<int>();
             foreach (var arg in args)
             {
                 string[] values = arg.Split(',');
                 Checker.CheckDiceFaces(arg, values);
                 foreach (var value in values)
                 {
-                        faces.Add(Convert.ToInt32(value));
+                        dice.Add(Convert.ToInt32(value));
                 }
-                dices.Add(faces);
+                dices.Add(dice);
+                dice = [];
             }
             return dices;
         }
