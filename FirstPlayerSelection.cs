@@ -23,7 +23,11 @@ namespace Task3
                 Console.Write("Your selection: ");
                 string userSelection = Console.ReadLine();
                 if (userSelection == "X") Environment.Exit(0);
-                if (userSelection == "?") Console.WriteLine("Table");//To do later
+                else if (userSelection == "?") 
+                {
+                    HelpTable.DisplayHelpTable(Program.dices);
+                    continue;
+                }
                 if (userSelection == "0" || userSelection == "1")
                 {
                     Console.WriteLine($"My selection: {computerSelection} (KEY={key})");

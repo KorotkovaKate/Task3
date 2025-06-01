@@ -77,7 +77,7 @@ namespace Task3
 
             if (isUserGuess)
             {
-                (List<int>, List<int>) userAndComputerDice = ChooseDices.StartWithUser(dices);
+                (List<int>, List<int>) userAndComputerDice = SelectionDices.StartWithUser(dices);
                 List<int> userDice = userAndComputerDice.Item1;
                 List<int> computerDice = userAndComputerDice.Item2;
 
@@ -87,7 +87,7 @@ namespace Task3
             }
             else
             {
-                (List<int>, List<int>) userAndComputerDice = ChooseDices.StartWithComputer(dices);
+                (List<int>, List<int>) userAndComputerDice = SelectionDices.StartWithComputer(dices);
                 List<int> userDice = userAndComputerDice.Item1;
                 List<int> computerDice = userAndComputerDice.Item2;
 
