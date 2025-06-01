@@ -22,8 +22,8 @@ namespace Task3
         {
             while (true) 
             {
-                string userSelection = Console.ReadLine();
-                if (userSelection == "X") Environment.Exit(0);
+                string userSelection = Console.ReadLine().ToLower();
+                if (userSelection == "x") Environment.Exit(0);
                 if (userSelection == "?")
                 {
                     HelpTable.DisplayHelpTable(Program.dices);
